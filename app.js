@@ -74,7 +74,6 @@ console.log(convertTo12Hour("12:00"));
 console.log(convertTo12Hour("18:30"));
 console.log(convertTo12Hour("09:05"));
 
-
 // 8-checks if a number is within a specified range.
 function isInRange(num, min, max) {
   return num >= min && num <= max;
@@ -83,3 +82,23 @@ function isInRange(num, min, max) {
 console.log(isInRange(5, 1, 10)); // true
 console.log(isInRange(0, 1, 10)); // false
 console.log(isInRange(10, 1, 10)); // true
+
+// 9-calculates Body Mass
+
+function calculateBMI(weight, height) {
+  const bmi = weight / (height * height);
+  let category;
+  if (bmi < 18.5) {
+    category = "Underweight";
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    category = "Normal weight";
+  } else if (bmi >= 25 && bmi <= 29.9) {
+    category = "Overweight";
+  } else {
+    category = "Obese";
+  }
+  return { bmi: bmi.toFixed(2), category };
+}
+console.log(calculateBMI(60, 1.7));
+console.log(calculateBMI(45, 1.6));
+console.log(calculateBMI(90, 1.75));
