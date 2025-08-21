@@ -73,3 +73,13 @@ console.log(convertTo12Hour("00:15"));
 console.log(convertTo12Hour("12:00"));
 console.log(convertTo12Hour("18:30"));
 console.log(convertTo12Hour("09:05"));
+
+
+// 8-checks if a number is within a specified range.
+function isInRange(num, min, max) {
+  return num >= min && num <= max;
+}
+
+console.log(isInRange(5, 1, 10)); // true
+console.log(isInRange(0, 1, 10)); // false
+console.log(isInRange(10, 1, 10)); // true
