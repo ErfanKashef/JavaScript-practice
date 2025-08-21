@@ -102,3 +102,23 @@ function calculateBMI(weight, height) {
 console.log(calculateBMI(60, 1.7));
 console.log(calculateBMI(45, 1.6));
 console.log(calculateBMI(90, 1.75));
+
+// 10
+function containsVowel(str) {
+  const lowerStr = str.toLowerCase();
+
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  for (const char of lowerStr) {
+    if (vowels.includes(char)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+console.log(containsVowel("Hello"));
+console.log(containsVowel("sky"));
+console.log(containsVowel("JAVA"));
+console.log(containsVowel("rhythm"));
